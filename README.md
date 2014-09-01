@@ -3,6 +3,11 @@ Etude1 - Automobile Price Calculator
 
 An service provides total price calculation for automobile purchase.
 
+Technical Requirement
+---------------------
+
+Ruby Rack based micro-service which support HTTP endpoint Api.
+
 Calculation
 -----------
 
