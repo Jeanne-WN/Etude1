@@ -6,7 +6,9 @@ An service provides total price calculation for automobile purchase.
 Technical Requirement
 ---------------------
 
-Ruby Rack based micro-service which support HTTP endpoint Api.
+* Ruby Rack based micro-service
+* Support HTTP endpoint Api.
+* TDD/spec tests
 
 Calculation
 -----------
