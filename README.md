@@ -51,3 +51,97 @@ Total price = MSRP + Purchase Tax + Vehicel Tax + Compulsory Liability Insurance
     - Passanger Insurance
     
             ￥50 * Number of seats
+
+Example Interaction
+-------------------
+
+### Request
+
+    POST /price HTTP/1.1
+    Host: www.test-host.com
+    Accept: application/json
+    Content-Type: application/json
+    
+    {
+      "car": {
+        "Content-Type": "BMW",
+        "model": "BMW 328i",
+        "engine": {
+          "displacement": 2.0,
+          "power": 180
+        },
+        "body": {
+          "seat_number": 5
+        }
+      },
+      "prices": {
+        "total": 0,
+        "msrp": 0,
+        "purchase_tax": 0,
+        "vehicle_tax": 0,
+        "compulsory_insurance": 0,
+        "commercial_insurance": {
+          "third_party": {
+            "up_to": 500000,
+            "price": 0
+          },
+          "damage": {
+            "selected": true,
+            "price": 0
+          },
+          "glass": {
+            "selected": true,
+            "price": 0
+          },
+          "passanger": {
+            "selected": true,
+            "price": 0
+          }
+        }
+      }
+    }
+
+### Response
+
+    HTTP/1.1 200 OK
+    Content-Type: application/json
+    
+    {
+      "car": {
+        "Content-Type": "BMW",
+        "model": "BMW 328i",
+        "engine": {
+          "displacement": 2.0,
+          "power": 180
+        },
+        "body": {
+          "seat_number": 5
+        }
+      },
+      "prices": {
+        "total": 437830,
+        "msrp": 396000,
+        "purchase_tax": 33846,
+        "vehicle_tax": 480,
+        "compulsory_insurance": 950,
+        "commercial_insurance": {
+          "third_party": {
+            "up_to": 500000,
+            "price": 746
+          },
+          "damage": {
+            "selected": true,
+            "price": 4766
+          },
+          "glass": {
+            "selected": true,
+            "price": 792
+          },
+          "passanger": {
+            "selected": true,
+            "price": 250
+          }
+        }
+      }
+    }
+
