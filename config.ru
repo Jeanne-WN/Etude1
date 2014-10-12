@@ -1,3 +1,5 @@
-require_relative 'lib/hello_world'
+require 'webmachine/adapter'
+require 'webmachine/adapters/rack'
+require_relative 'lib/app'
 
-run HelloWorld.new
+run App.adapter
