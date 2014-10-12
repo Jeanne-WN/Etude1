@@ -1,0 +1,15 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rack (1.5.2)
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    test-unit (2.0.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rack
+  rack-test
+  test-unit
