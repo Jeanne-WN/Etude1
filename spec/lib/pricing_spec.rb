@@ -1,6 +1,5 @@
 require 'json'
 require 'rack/test'
-require_relative '../fixture'
 require_relative '../../lib/app'
 
 describe "Pricing" do
